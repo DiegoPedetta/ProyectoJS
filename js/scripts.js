@@ -6,13 +6,21 @@ const producto4 ={id:4,producto :'Bermuda de jean',precio : 6070,edicion:'Verano
 const producto5 ={id:5,producto :'Gorro de lana',precio : 2500,edicion:'Invierno'};
 
 
-// const ropaVerano = arrayProductos.filter((el) => el.edicion.includes('Verano'));
-//const ropaInvierno = arrayProductos.filter((el) => el.edicion.includes('Invierno'));
+//Array de obejtos 
+const arrayJoyas = [
+    {id:1,prodc:'Anillo',precio:7000,material:'oro'},
+    {id:2,prodc:'Cadena',precio:2000,material:'plata'},
+    {id:3,prodc:'Pulsera',precio:1500,material:'plata'},
+    {id:4,prodc:'Collar',precio:9150,material:'oro'}
+]
 
-// console.log(ropaInvierno);
-// console.log(ropaVerano);
+const joyasOro = arrayProductos.filter((el) => el.edicion.includes('oro'));
+const joyasPlata = arrayProductos.filter((el) => el.edicion.includes('plata'));
 
-let totalCompra= prompt('Ingrese el valor total de su compra para saber su descuento:'); //harcodeado solo para ver si funciona
+console.log(joyasOro);
+console.log(joyasPlata);
+
+let totalCompra= prompt('Ingrese el valor total de su compra para saber su descuento:');  
 
 Descuento(totalCompra);
 
@@ -32,6 +40,7 @@ let escoja= prompt("Escoja un producto del 1 al 6:");
 
 GuardarProducto(escoja,producto1,producto2,producto3,producto4,producto5);
 
+//Funcion con localstorage
 function GuardarProducto(escoja,producto1,producto2,producto3,producto4,producto5){
   if(escoja==1){
       const convertir= JSON.stringify(producto1);
